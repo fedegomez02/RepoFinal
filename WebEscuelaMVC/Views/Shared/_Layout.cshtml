@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/StyleSheet1.css"  rel="stylesheet"/>
+</head>
+<body>
+    <div class="container1">
+        <header>
+            <h2>Bienvenidos a la pagina de aulas</h2>
+        </header>
+        <section>
+        </section>
+    </div>
+    <div class="container">
+        <nav>
+            <ul class="lista">
+                <li>
+                    @Html.ActionLink("Volver al inicio", "Index", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Cargar un Aula", "Create", "Aula")
+                </li>
+                <li>
+                    @Html.ActionLink("Ver lista de aulas", "Index", "Aula")
+                </li>
+            </ul>
+        </nav>
+        <div class="mainContainer">
+            <article id="content">
+                @RenderBody()
+            </article>
+            <footer>
+                <h4>copyright-2022-derechos reservados--</h4>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

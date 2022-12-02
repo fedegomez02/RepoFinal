@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebEscuelaMVC.Models.Aula>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <p>@Html.ActionLink("Nuevo Aula", "Create", "Aula")</p>
+        <table>
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.Id)</th>
+                <th>@Html.DisplayNameFor(m => m.Numero)</th>
+                <th>@Html.DisplayNameFor(m => m.tipo)</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.Id)</td>
+                    <th>@Html.DisplayNameFor(m => m.Numero)</th>
+                    <th>@Html.DisplayNameFor(m => m.tipo)</th>
+
+
+                    <td>@Html.ActionLink("Detalle", "Detalle", new { id = item.Id })</td>
+                    <td>@Html.ActionLink("Eliminar", "Delete", new { id = item.Id })</td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@model WebEscuelaMVC.Models.Aula
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h2>Detalle</h2>
+<fieldset>
+    <legend>Detalles del aula @Model.Id</legend>
+    <table>
+        <tr>
+            <p>
+                @Html.LabelFor(model => model.Numero)
+                @Html.EditorFor(model => model.Numero)
+                @Html.ValidationMessageFor(model => model.Numero)
+            </p>
+
+            <p>
+                @Html.LabelFor(model => model.tipo)
+                @Html.EditorFor(model => model.tipo)
+                @Html.ValidationMessageFor(model => model.tipo)
+            </p>
+
+
+        </tr>
+  
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Go to index", "Index", "Auto")
+</p>
